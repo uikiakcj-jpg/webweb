@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        let lastX = 0;
+let lastY = 0;
+
+function blyat() {
+    el = document.getElementById("move");
+   box = document.getElementById("box");
+   maxX = box.clientWidth - el.offsetWidth;
+   maxY = box.clientHeight - el.offsetHeight;
+
+  let x, y;
+
+  do {
+    x = Math.random() * maxX;
+    y = Math.random() * maxY;
+  } while (Math.abs(x - lastX) < 30 && Math.abs(y - lastY) < 30);
+
+  lastX = x;
+  lastY = y;
+
+  el.style.left = x + "px";
+  el.style.top = y + "px";
+}
+
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>will u be my valentine </h1>
+    <div id="box">
+    <img src="nanobombs-cat (1).gif" alt="">
+    <a href="gg.html"><input type="button" value="yes" id="yes" ></a>
+    
+    <input type="button"  onmouseover="blyat()" id="move" value="no">
+    </div>
+    
+</body>
+<style>
+body{
+    position: relative;
+    height: 100vh;
+}
+*{
+        margin: 0;
+        padding: 0;}
+h1{
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color:rgba(0, 0, 0, 0.908);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-bottom: 24px;
+  
+
+position: absolute;
+top: 10%;
+left: 50% ;
+transform: translate(-50%,-50%);
+}
+img{
+border-radius: 14px;
+box-shadow: 2px 10px 8px rgba(0,0,0,0.15);
+width: 30%;
+height: 50%;
+position: absolute;
+top: 30%;
+left: 50% ;
+transform: translate(-50%,-50%);
+}
+body{
+
+    background: rgb(240, 210, 215);
+}
+#yes{font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color:white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 0px;
+    border-radius:24px ;
+    background-color: rgba(216, 161, 170, 0.785);
+    width: 10%;
+    height: 5%;
+    position: absolute;
+    top: 80%;
+    left: 30% ;
+   
+}
+    #box {
+    box-shadow: 2px 10px 8px rgba(0, 0, 0, 0.301); 
+    border-radius:24px ;
+  width: 70%;
+  height: 70%;
+  background-color:white;
+  position: absolute;
+  top: 50%;
+  left: 50% ;
+  transform: translate(-50%,-50%);
+}
+
+#move {
+    font-weight: bolder;
+    font-size: 18px;
+    
+    line-height: 1.6;
+    color:rgba(0, 0, 0, 0.908);
+    border: 0px;
+    border-radius:24px ;
+    background-color: rgba(216, 161, 170, 0.785);
+    width: 10%;
+    height: 5%;
+    position: absolute;
+    top: 80%;
+    left: 60% ;
+  position: absolute;
+
+  cursor: pointer;
+  transition: 0.4s;
+}
+#yes:hover{
+    font-weight: bolder;
+    transition-duration:0.5s;
+    scale: 150%;}
+</style>
+</html>
